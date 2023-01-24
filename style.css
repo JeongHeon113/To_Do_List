@@ -1,0 +1,144 @@
+:root{
+    --main-bg-color:#222;
+    --main-color: #f5f5f7;
+}
+
+body{
+    margin: 0;
+    font-family: 'Dongle', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: var(--main-color);
+    color: var(--main-color);
+
+}
+h1{
+    padding: 15px 0;
+    margin: 0;
+}
+.container{
+
+    background-color: var(--main-bg-color);
+    min-height: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    /* border-top: 10px solid rgb(236, 215, 175); */
+    /* border-bottom : 10px solid rgb(236, 215, 175); */
+
+}
+/* .task_area{
+    border: 1px solid lightgray;
+} */
+.task_tabs{
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+}
+.task_tabs div{
+    padding: 1em;
+
+}
+#under_line{
+    height: 2px;
+    background-color:  #f5f5f7 ;
+    position: absolute;
+    padding: 0px;
+    transition: 0.5s;
+    left: 0px;
+    width: 50px;
+    top: 52px;
+}
+.task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 0 0;
+}
+.task-done{
+    text-decoration: line-through;
+    /* position: relative; */
+}
+.task_tabs div{
+    cursor: pointer;
+}
+.input_area{
+    position: relative;
+    display: flex;
+    width: 250px;
+}
+#input_task{
+ width: 250px; 
+ background: transparent;  
+ color: var(--main-color);
+ border: none;
+ outline: none;
+ box-shadow: none;
+ font-size: 1em;
+ letter-spacing: 0.1em;
+ padding: 10px 0 5px;
+}
+.input_area span{
+    position: absolute;
+    left: 0;
+    padding: 10px 0 5px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    pointer-events: none;
+    letter-spacing: 0.1em;
+    transition: 0.5s;
+}
+/* .input_area input:valid ~ span, */
+.input_area input:focus ~ span{
+    color: #2196f3;
+    transform: translateY(-16px);
+    font-size: 0.6em;
+}
+.input_area i{
+    position: absolute;
+    width: 100%;
+    background: var(--main-color);
+    height: 2px;
+    left: 0;
+    bottom: 0;
+}
+
+.input_area i::before{
+    content: '';
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,#ff1b69,#ff0,#2196f3,#9c27b0,#ff1b69);
+    animation: animate 2s linear infinite;
+    transition: 0.5s;
+
+}
+.input_area input:focus ~ i::before{
+
+    opacity: 1;
+    left: 0;}
+@keyframes animate{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 250px;
+    }
+}
+.button_area{
+    position:absolute;
+    right: -30px;
+    bottom: 0;
+    height: 100%;
+}
+.task button{
+    border-radius: 5px;
+    font-weight: 600;
+    width: 59px;
+}
+#add_button{
+    height: 100%;
+    background: transparent;  
+    font-size: 30px;
+    border: 0;
+    color: var(--main-color);
+}
+
