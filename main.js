@@ -89,7 +89,7 @@ function render() {
 //그 후 완료된거면 task-done을 실행, 아니면 기본 div 실행
 
 function toggleComplete(id) {
-  console.log("toggleComplete실행 됨")
+
   for (let i = 0; i < taskList.length; i++) {
     if (taskList[i].id == id) {
       taskList[i].isComplete = !taskList[i].isComplete;

@@ -132,7 +132,7 @@ h1{
 .task button{
     border-radius: 5px;
     font-weight: 600;
-    width: 59px;
+    width: 100%px;
 }
 #add_button{
     height: 100%;
